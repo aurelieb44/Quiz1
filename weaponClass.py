@@ -10,15 +10,13 @@ class Weapon:
         self.__status = 'Active'
 
     def count_bullets(self):
-        self.__bullets = random.randint(0, 10) 
+        self.__bullets = random.randint(10, 100000) 
 
     def fire_bullet(self):
         if self.__bullets != 0:
             self.__bullets -= 1
-            print('Updated Number of Bullets:\t\t', self.__bullets)
         else:
             self.__status = 'Inactive'
-            print('Updated Status:\t\t\t\t', self.__status)
     
     def get_name(self):
         return self.__name
@@ -34,7 +32,6 @@ class Weapon:
     
     def get_status(self):
         return self.__status
-
 '''
 Create a Weapon Class definition according to the following specs:
 Attributes:
@@ -50,7 +47,6 @@ Create a method named 'fire_bullet' that will simulate
 firing a bullet. This is accomplished by decreasing the number of bullets by 1 
 every time the method is called. When the bullet count reaches zero, it should change
 the attribute 'status' to 'Inactive'
-
 '''
 
 

@@ -37,7 +37,7 @@ for record in content_file:
     # print out the range of the weapon using the appropriate method of the object
     print('Range: ', my_weapon.get_range1())
     # print out the number of bullets of the weapon using the appropriate method of the object
-    print('Initial Number of Bullets: ', my_weapon.get_bullets())
+    print('Initial Number of Bullets:\t', my_weapon.get_bullets())
 
     #use an input statement to halt the program and wait for the user - 
     input("Press any key to fire the weapon")
@@ -47,14 +47,13 @@ for record in content_file:
         # call the appropriate method to fire a bullet
         my_weapon.fire_bullet()
         # print out the bullet count every time the weapon is fired
+        print('Number of Bullets Remaining:\t', my_weapon.get_bullets(), end='\r', flush = True)
+    print('\n')
     
 #using a loop print out the name and number of bullets from the dictionary
 for key, value in weapons_dict.items():
     print('Name: ', key, '\t\tInitial Number of Bullets: ', value)
-# questions: do you want the initial number of bullets to be pritned out in the dictionary?
-# I print out the bullet count each time from the class, is this ok? instead of following your instructions
 
-    
 
 
     
